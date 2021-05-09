@@ -1,0 +1,11 @@
+[
+{
+  "modid": "fantasticaw",
+  "name": "Fantastic AW",
+  "description": "A cross-compat mod for Fantastic Lib and Armourer's Workshop",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "authorList": ["Laike_Endaril"],
+  "credits": "RiskyKen (creator of Armourer's Workshop)"
+}
+]
