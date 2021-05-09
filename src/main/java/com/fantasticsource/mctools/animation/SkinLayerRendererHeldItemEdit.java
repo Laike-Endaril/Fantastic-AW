@@ -58,19 +58,36 @@ public class SkinLayerRendererHeldItemEdit extends LayerHeldItem
                 GlStateManager.scale(0.5F, 0.5F, 0.5F);
             }
 
-            ForcedAWSkinOverrides.tryEnableAWSkinOverrideHack(rightStack);
-            renderHeldItem(entitylivingbaseIn, rightStack, ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND, EnumHandSide.RIGHT, skinCapability);
-            ForcedAWSkinOverrides.tryDisableAWSkinOverrideHack(rightStack);
 
-            ForcedAWSkinOverrides.tryEnableAWSkinOverrideHack(leftStack);
-            renderHeldItem(entitylivingbaseIn, leftStack, ItemCameraTransforms.TransformType.THIRD_PERSON_LEFT_HAND, EnumHandSide.LEFT, skinCapability);
-            ForcedAWSkinOverrides.tryDisableAWSkinOverrideHack(leftStack);
+            CBipedAnimation playerAnimation = CBipedAnimation.ANIMATION_DATA.get(entitylivingbaseIn);
+            long millis = System.currentTimeMillis();
+            if (playerAnimation != null && playerAnimation.handItemSwap != null && playerAnimation.handItemSwap.getRelativePosition(millis).values[0] < 0)
+            {
+                ForcedAWSkinOverrides.tryEnableAWSkinOverrideHack(leftStack);
+                renderHeldItem(entitylivingbaseIn, leftStack, ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND, EnumHandSide.RIGHT, skinCapability, millis);
+                ForcedAWSkinOverrides.tryDisableAWSkinOverrideHack(leftStack);
+
+                ForcedAWSkinOverrides.tryEnableAWSkinOverrideHack(rightStack);
+                renderHeldItem(entitylivingbaseIn, rightStack, ItemCameraTransforms.TransformType.THIRD_PERSON_LEFT_HAND, EnumHandSide.LEFT, skinCapability, millis);
+                ForcedAWSkinOverrides.tryDisableAWSkinOverrideHack(rightStack);
+            }
+            else
+            {
+                ForcedAWSkinOverrides.tryEnableAWSkinOverrideHack(rightStack);
+                renderHeldItem(entitylivingbaseIn, rightStack, ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND, EnumHandSide.RIGHT, skinCapability, millis);
+                ForcedAWSkinOverrides.tryDisableAWSkinOverrideHack(rightStack);
+
+                ForcedAWSkinOverrides.tryEnableAWSkinOverrideHack(leftStack);
+                renderHeldItem(entitylivingbaseIn, leftStack, ItemCameraTransforms.TransformType.THIRD_PERSON_LEFT_HAND, EnumHandSide.LEFT, skinCapability, millis);
+                ForcedAWSkinOverrides.tryDisableAWSkinOverrideHack(leftStack);
+            }
+
 
             GlStateManager.popMatrix();
         }
     }
 
-    private void renderHeldItem(EntityLivingBase entityLivingBase, ItemStack itemStack, ItemCameraTransforms.TransformType transformType, EnumHandSide handSide, IEntitySkinCapability skinCapability)
+    private void renderHeldItem(EntityLivingBase entityLivingBase, ItemStack itemStack, ItemCameraTransforms.TransformType transformType, EnumHandSide handSide, IEntitySkinCapability skinCapability, long millis)
     {
         if (!itemStack.isEmpty())
         {
@@ -141,8 +158,6 @@ public class SkinLayerRendererHeldItemEdit extends LayerHeldItem
                                 CBipedAnimation playerAnimation = CBipedAnimation.ANIMATION_DATA.get(entityLivingBase);
                                 if (playerAnimation != null)
                                 {
-                                    long millis = System.currentTimeMillis();
-
                                     if (handSide == EnumHandSide.LEFT)
                                     {
                                         if (playerAnimation.leftItem.xScalePath != null)
@@ -211,8 +226,6 @@ public class SkinLayerRendererHeldItemEdit extends LayerHeldItem
                                 CBipedAnimation playerAnimation = CBipedAnimation.ANIMATION_DATA.get(entityLivingBase);
                                 if (playerAnimation != null)
                                 {
-                                    long millis = System.currentTimeMillis();
-
                                     if (handSide == EnumHandSide.LEFT)
                                     {
                                         if (playerAnimation.leftItem.xScalePath != null)
@@ -286,8 +299,6 @@ public class SkinLayerRendererHeldItemEdit extends LayerHeldItem
                 CBipedAnimation playerAnimation = CBipedAnimation.ANIMATION_DATA.get(entityLivingBase);
                 if (playerAnimation != null)
                 {
-                    long millis = System.currentTimeMillis();
-
                     if (handSide == EnumHandSide.LEFT)
                     {
                         if (playerAnimation.leftItem.xScalePath != null)
