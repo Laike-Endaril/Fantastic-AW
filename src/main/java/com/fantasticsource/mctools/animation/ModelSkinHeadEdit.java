@@ -85,23 +85,23 @@ public class ModelSkinHeadEdit extends ModelSkinHead
             CBipedAnimation playerAnimation = CBipedAnimation.getCurrent(entity);
             long millis = System.currentTimeMillis();
 
-            if (playerAnimation.head.xPath != null) bipedHead.offsetX = (float) playerAnimation.head.xPath.getRelativePosition(millis).values[0];
-            if (playerAnimation.head.yPath != null) bipedHead.offsetY = (float) playerAnimation.head.yPath.getRelativePosition(millis).values[0];
-            if (playerAnimation.head.zPath != null) bipedHead.offsetZ = (float) playerAnimation.head.zPath.getRelativePosition(millis).values[0];
-            if (playerAnimation.head.xRotPath != null) bipedHead.rotateAngleX = (float) Tools.posMod(playerAnimation.head.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-            if (playerAnimation.head.yRotPath != null) bipedHead.rotateAngleY = (float) Tools.posMod(playerAnimation.head.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-            if (playerAnimation.head.zRotPath != null) bipedHead.rotateAngleZ = (float) Tools.posMod(playerAnimation.head.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+            if (playerAnimation.head.xPath.path != null) bipedHead.offsetX = (float) playerAnimation.head.xPath.getRelativePosition(millis).values[0];
+            if (playerAnimation.head.yPath.path != null) bipedHead.offsetY = (float) playerAnimation.head.yPath.getRelativePosition(millis).values[0];
+            if (playerAnimation.head.zPath.path != null) bipedHead.offsetZ = (float) playerAnimation.head.zPath.getRelativePosition(millis).values[0];
+            if (playerAnimation.head.xRotPath.path != null) bipedHead.rotateAngleX = (float) Tools.posMod(playerAnimation.head.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+            if (playerAnimation.head.yRotPath.path != null) bipedHead.rotateAngleY = (float) Tools.posMod(playerAnimation.head.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+            if (playerAnimation.head.zRotPath.path != null) bipedHead.rotateAngleZ = (float) Tools.posMod(playerAnimation.head.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
 
-            if (playerAnimation.head.xScalePath != null)
+            if (playerAnimation.head.xScalePath.path != null)
             {
                 headScale = new float[]{(float) playerAnimation.head.xScalePath.getRelativePosition(millis).values[0], 1, 1};
             }
-            if (playerAnimation.head.yScalePath != null)
+            if (playerAnimation.head.yScalePath.path != null)
             {
                 if (headScale == null) headScale = new float[]{1, (float) playerAnimation.head.yScalePath.getRelativePosition(millis).values[0], 1};
                 else headScale[1] = (float) playerAnimation.head.yScalePath.getRelativePosition(millis).values[0];
             }
-            if (playerAnimation.head.zScalePath != null)
+            if (playerAnimation.head.zScalePath.path != null)
             {
                 if (headScale == null) headScale = new float[]{1, 1, (float) playerAnimation.head.zScalePath.getRelativePosition(millis).values[0]};
                 else headScale[2] = (float) playerAnimation.head.zScalePath.getRelativePosition(millis).values[0];

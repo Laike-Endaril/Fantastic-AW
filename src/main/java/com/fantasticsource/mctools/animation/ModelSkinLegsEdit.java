@@ -100,23 +100,23 @@ public class ModelSkinLegsEdit extends ModelSkinLegs
             if (skinPart.getPartType().getPartName().equals("leftLeg"))
             {
                 //FLib compat start
-                if (playerAnimation.leftLeg.xPath != null) bipedLeftLeg.offsetX = (float) playerAnimation.leftLeg.xPath.getRelativePosition(millis).values[0];
-                if (playerAnimation.leftLeg.yPath != null) bipedLeftLeg.offsetY = (float) playerAnimation.leftLeg.yPath.getRelativePosition(millis).values[0];
-                if (playerAnimation.leftLeg.zPath != null) bipedLeftLeg.offsetZ = (float) playerAnimation.leftLeg.zPath.getRelativePosition(millis).values[0];
-                if (playerAnimation.leftLeg.xRotPath != null) bipedLeftLeg.rotateAngleX = (float) Tools.posMod(playerAnimation.leftLeg.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                if (playerAnimation.leftLeg.yRotPath != null) bipedLeftLeg.rotateAngleY = (float) Tools.posMod(playerAnimation.leftLeg.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                if (playerAnimation.leftLeg.zRotPath != null) bipedLeftLeg.rotateAngleZ = (float) Tools.posMod(playerAnimation.leftLeg.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                if (playerAnimation.leftLeg.xPath.path != null) bipedLeftLeg.offsetX = (float) playerAnimation.leftLeg.xPath.getRelativePosition(millis).values[0];
+                if (playerAnimation.leftLeg.yPath.path != null) bipedLeftLeg.offsetY = (float) playerAnimation.leftLeg.yPath.getRelativePosition(millis).values[0];
+                if (playerAnimation.leftLeg.zPath.path != null) bipedLeftLeg.offsetZ = (float) playerAnimation.leftLeg.zPath.getRelativePosition(millis).values[0];
+                if (playerAnimation.leftLeg.xRotPath.path != null) bipedLeftLeg.rotateAngleX = (float) Tools.posMod(playerAnimation.leftLeg.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                if (playerAnimation.leftLeg.yRotPath.path != null) bipedLeftLeg.rotateAngleY = (float) Tools.posMod(playerAnimation.leftLeg.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                if (playerAnimation.leftLeg.zRotPath.path != null) bipedLeftLeg.rotateAngleZ = (float) Tools.posMod(playerAnimation.leftLeg.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
 
-                if (playerAnimation.leftLeg.xScalePath != null)
+                if (playerAnimation.leftLeg.xScalePath.path != null)
                 {
                     leftLegScale = new float[]{(float) playerAnimation.leftLeg.xScalePath.getRelativePosition(millis).values[0], 1, 1};
                 }
-                if (playerAnimation.leftLeg.yScalePath != null)
+                if (playerAnimation.leftLeg.yScalePath.path != null)
                 {
                     if (leftLegScale == null) leftLegScale = new float[]{1, (float) playerAnimation.leftLeg.yScalePath.getRelativePosition(millis).values[0], 1};
                     else leftLegScale[1] = (float) playerAnimation.leftLeg.yScalePath.getRelativePosition(millis).values[0];
                 }
-                if (playerAnimation.leftLeg.zScalePath != null)
+                if (playerAnimation.leftLeg.zScalePath.path != null)
                 {
                     if (leftLegScale == null) leftLegScale = new float[]{1, 1, (float) playerAnimation.leftLeg.zScalePath.getRelativePosition(millis).values[0]};
                     else leftLegScale[2] = (float) playerAnimation.leftLeg.zScalePath.getRelativePosition(millis).values[0];
@@ -130,23 +130,23 @@ public class ModelSkinLegsEdit extends ModelSkinLegs
             else if (skinPart.getPartType().getPartName().equals("rightLeg"))
             {
                 //FLib compat start
-                if (playerAnimation.rightLeg.xPath != null) bipedRightLeg.offsetX = (float) playerAnimation.rightLeg.xPath.getRelativePosition(millis).values[0];
-                if (playerAnimation.rightLeg.yPath != null) bipedRightLeg.offsetY = (float) playerAnimation.rightLeg.yPath.getRelativePosition(millis).values[0];
-                if (playerAnimation.rightLeg.zPath != null) bipedRightLeg.offsetZ = (float) playerAnimation.rightLeg.zPath.getRelativePosition(millis).values[0];
-                if (playerAnimation.rightLeg.xRotPath != null) bipedRightLeg.rotateAngleX = (float) Tools.posMod(playerAnimation.rightLeg.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                if (playerAnimation.rightLeg.yRotPath != null) bipedRightLeg.rotateAngleY = (float) Tools.posMod(playerAnimation.rightLeg.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                if (playerAnimation.rightLeg.zRotPath != null) bipedRightLeg.rotateAngleZ = (float) Tools.posMod(playerAnimation.rightLeg.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                if (playerAnimation.rightLeg.xPath.path != null) bipedRightLeg.offsetX = (float) playerAnimation.rightLeg.xPath.getRelativePosition(millis).values[0];
+                if (playerAnimation.rightLeg.yPath.path != null) bipedRightLeg.offsetY = (float) playerAnimation.rightLeg.yPath.getRelativePosition(millis).values[0];
+                if (playerAnimation.rightLeg.zPath.path != null) bipedRightLeg.offsetZ = (float) playerAnimation.rightLeg.zPath.getRelativePosition(millis).values[0];
+                if (playerAnimation.rightLeg.xRotPath.path != null) bipedRightLeg.rotateAngleX = (float) Tools.posMod(playerAnimation.rightLeg.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                if (playerAnimation.rightLeg.yRotPath.path != null) bipedRightLeg.rotateAngleY = (float) Tools.posMod(playerAnimation.rightLeg.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                if (playerAnimation.rightLeg.zRotPath.path != null) bipedRightLeg.rotateAngleZ = (float) Tools.posMod(playerAnimation.rightLeg.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
 
-                if (playerAnimation.rightLeg.xScalePath != null)
+                if (playerAnimation.rightLeg.xScalePath.path != null)
                 {
                     rightLegScale = new float[]{(float) playerAnimation.rightLeg.xScalePath.getRelativePosition(millis).values[0], 1, 1};
                 }
-                if (playerAnimation.rightLeg.yScalePath != null)
+                if (playerAnimation.rightLeg.yScalePath.path != null)
                 {
                     if (rightLegScale == null) rightLegScale = new float[]{1, (float) playerAnimation.rightLeg.yScalePath.getRelativePosition(millis).values[0], 1};
                     else rightLegScale[1] = (float) playerAnimation.rightLeg.yScalePath.getRelativePosition(millis).values[0];
                 }
-                if (playerAnimation.rightLeg.zScalePath != null)
+                if (playerAnimation.rightLeg.zScalePath.path != null)
                 {
                     if (rightLegScale == null) rightLegScale = new float[]{1, 1, (float) playerAnimation.rightLeg.zScalePath.getRelativePosition(millis).values[0]};
                     else rightLegScale[2] = (float) playerAnimation.rightLeg.zScalePath.getRelativePosition(millis).values[0];

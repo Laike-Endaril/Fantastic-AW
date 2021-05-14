@@ -132,23 +132,23 @@ public class ModelSkinOutfitEdit extends ModelSkinOutfit
                     }
 
                     //FLib compat start
-                    if (playerAnimation.head.xPath != null) bipedHead.offsetX = (float) playerAnimation.head.xPath.getRelativePosition(millis).values[0];
-                    if (playerAnimation.head.yPath != null) bipedHead.offsetY = (float) playerAnimation.head.yPath.getRelativePosition(millis).values[0];
-                    if (playerAnimation.head.zPath != null) bipedHead.offsetZ = (float) playerAnimation.head.zPath.getRelativePosition(millis).values[0];
-                    if (playerAnimation.head.xRotPath != null) bipedHead.rotateAngleX = (float) Tools.posMod(playerAnimation.head.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                    if (playerAnimation.head.yRotPath != null) bipedHead.rotateAngleY = (float) Tools.posMod(playerAnimation.head.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                    if (playerAnimation.head.zRotPath != null) bipedHead.rotateAngleZ = (float) Tools.posMod(playerAnimation.head.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                    if (playerAnimation.head.xPath.path != null) bipedHead.offsetX = (float) playerAnimation.head.xPath.getRelativePosition(millis).values[0];
+                    if (playerAnimation.head.yPath.path != null) bipedHead.offsetY = (float) playerAnimation.head.yPath.getRelativePosition(millis).values[0];
+                    if (playerAnimation.head.zPath.path != null) bipedHead.offsetZ = (float) playerAnimation.head.zPath.getRelativePosition(millis).values[0];
+                    if (playerAnimation.head.xRotPath.path != null) bipedHead.rotateAngleX = (float) Tools.posMod(playerAnimation.head.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                    if (playerAnimation.head.yRotPath.path != null) bipedHead.rotateAngleY = (float) Tools.posMod(playerAnimation.head.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                    if (playerAnimation.head.zRotPath.path != null) bipedHead.rotateAngleZ = (float) Tools.posMod(playerAnimation.head.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
 
-                    if (playerAnimation.head.xScalePath != null)
+                    if (playerAnimation.head.xScalePath.path != null)
                     {
                         headScale = new float[]{(float) playerAnimation.head.xScalePath.getRelativePosition(millis).values[0], 1, 1};
                     }
-                    if (playerAnimation.head.yScalePath != null)
+                    if (playerAnimation.head.yScalePath.path != null)
                     {
                         if (headScale == null) headScale = new float[]{1, (float) playerAnimation.head.yScalePath.getRelativePosition(millis).values[0], 1};
                         else headScale[1] = (float) playerAnimation.head.yScalePath.getRelativePosition(millis).values[0];
                     }
-                    if (playerAnimation.head.zScalePath != null)
+                    if (playerAnimation.head.zScalePath.path != null)
                     {
                         if (headScale == null) headScale = new float[]{1, 1, (float) playerAnimation.head.zScalePath.getRelativePosition(millis).values[0]};
                         else headScale[2] = (float) playerAnimation.head.zScalePath.getRelativePosition(millis).values[0];
@@ -174,23 +174,23 @@ public class ModelSkinOutfitEdit extends ModelSkinOutfit
                 {
                     case "armourers:chest.base":
                         //FLib compat start
-                        if (playerAnimation.chest.xPath != null) bipedBody.offsetX = (float) playerAnimation.chest.xPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.chest.yPath != null) bipedBody.offsetY = (float) playerAnimation.chest.yPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.chest.zPath != null) bipedBody.offsetZ = (float) playerAnimation.chest.zPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.chest.xRotPath != null) bipedBody.rotateAngleX = (float) Tools.posMod(playerAnimation.chest.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.chest.yRotPath != null) bipedBody.rotateAngleY = (float) Tools.posMod(playerAnimation.chest.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.chest.zRotPath != null) bipedBody.rotateAngleZ = (float) Tools.posMod(playerAnimation.chest.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.chest.xPath.path != null) bipedBody.offsetX = (float) playerAnimation.chest.xPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.chest.yPath.path != null) bipedBody.offsetY = (float) playerAnimation.chest.yPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.chest.zPath.path != null) bipedBody.offsetZ = (float) playerAnimation.chest.zPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.chest.xRotPath.path != null) bipedBody.rotateAngleX = (float) Tools.posMod(playerAnimation.chest.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.chest.yRotPath.path != null) bipedBody.rotateAngleY = (float) Tools.posMod(playerAnimation.chest.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.chest.zRotPath.path != null) bipedBody.rotateAngleZ = (float) Tools.posMod(playerAnimation.chest.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
 
-                        if (playerAnimation.chest.xScalePath != null)
+                        if (playerAnimation.chest.xScalePath.path != null)
                         {
                             chestScale = new float[]{(float) playerAnimation.chest.xScalePath.getRelativePosition(millis).values[0], 1, 1};
                         }
-                        if (playerAnimation.chest.yScalePath != null)
+                        if (playerAnimation.chest.yScalePath.path != null)
                         {
                             if (chestScale == null) chestScale = new float[]{1, (float) playerAnimation.chest.yScalePath.getRelativePosition(millis).values[0], 1};
                             else chestScale[1] = (float) playerAnimation.chest.yScalePath.getRelativePosition(millis).values[0];
                         }
-                        if (playerAnimation.chest.zScalePath != null)
+                        if (playerAnimation.chest.zScalePath.path != null)
                         {
                             if (chestScale == null) chestScale = new float[]{1, 1, (float) playerAnimation.chest.zScalePath.getRelativePosition(millis).values[0]};
                             else chestScale[2] = (float) playerAnimation.chest.zScalePath.getRelativePosition(millis).values[0];
@@ -209,23 +209,23 @@ public class ModelSkinOutfitEdit extends ModelSkinOutfit
 
                     case "armourers:chest.leftArm":
                         //FLib compat start
-                        if (playerAnimation.leftArm.xPath != null) bipedLeftArm.offsetX = (float) playerAnimation.leftArm.xPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.leftArm.yPath != null) bipedLeftArm.offsetY = (float) playerAnimation.leftArm.yPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.leftArm.zPath != null) bipedLeftArm.offsetZ = (float) playerAnimation.leftArm.zPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.leftArm.xRotPath != null) bipedLeftArm.rotateAngleX = (float) Tools.posMod(playerAnimation.leftArm.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.leftArm.yRotPath != null) bipedLeftArm.rotateAngleY = (float) Tools.posMod(playerAnimation.leftArm.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.leftArm.zRotPath != null) bipedLeftArm.rotateAngleZ = (float) Tools.posMod(playerAnimation.leftArm.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.leftArm.xPath.path != null) bipedLeftArm.offsetX = (float) playerAnimation.leftArm.xPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.leftArm.yPath.path != null) bipedLeftArm.offsetY = (float) playerAnimation.leftArm.yPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.leftArm.zPath.path != null) bipedLeftArm.offsetZ = (float) playerAnimation.leftArm.zPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.leftArm.xRotPath.path != null) bipedLeftArm.rotateAngleX = (float) Tools.posMod(playerAnimation.leftArm.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.leftArm.yRotPath.path != null) bipedLeftArm.rotateAngleY = (float) Tools.posMod(playerAnimation.leftArm.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.leftArm.zRotPath.path != null) bipedLeftArm.rotateAngleZ = (float) Tools.posMod(playerAnimation.leftArm.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
 
-                        if (playerAnimation.leftArm.xScalePath != null)
+                        if (playerAnimation.leftArm.xScalePath.path != null)
                         {
                             leftArmScale = new float[]{(float) playerAnimation.leftArm.xScalePath.getRelativePosition(millis).values[0], 1, 1};
                         }
-                        if (playerAnimation.leftArm.yScalePath != null)
+                        if (playerAnimation.leftArm.yScalePath.path != null)
                         {
                             if (leftArmScale == null) leftArmScale = new float[]{1, (float) playerAnimation.leftArm.yScalePath.getRelativePosition(millis).values[0], 1};
                             else leftArmScale[1] = (float) playerAnimation.leftArm.yScalePath.getRelativePosition(millis).values[0];
                         }
-                        if (playerAnimation.leftArm.zScalePath != null)
+                        if (playerAnimation.leftArm.zScalePath.path != null)
                         {
                             if (leftArmScale == null) leftArmScale = new float[]{1, 1, (float) playerAnimation.leftArm.zScalePath.getRelativePosition(millis).values[0]};
                             else leftArmScale[2] = (float) playerAnimation.leftArm.zScalePath.getRelativePosition(millis).values[0];
@@ -240,23 +240,23 @@ public class ModelSkinOutfitEdit extends ModelSkinOutfit
 
                     case "armourers:chest.rightArm":
                         //FLib compat start
-                        if (playerAnimation.rightArm.xPath != null) bipedRightArm.offsetX = (float) playerAnimation.rightArm.xPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.rightArm.yPath != null) bipedRightArm.offsetY = (float) playerAnimation.rightArm.yPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.rightArm.zPath != null) bipedRightArm.offsetZ = (float) playerAnimation.rightArm.zPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.rightArm.xRotPath != null) bipedRightArm.rotateAngleX = (float) Tools.posMod(playerAnimation.rightArm.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.rightArm.yRotPath != null) bipedRightArm.rotateAngleY = (float) Tools.posMod(playerAnimation.rightArm.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.rightArm.zRotPath != null) bipedRightArm.rotateAngleZ = (float) Tools.posMod(playerAnimation.rightArm.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.rightArm.xPath.path != null) bipedRightArm.offsetX = (float) playerAnimation.rightArm.xPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.rightArm.yPath.path != null) bipedRightArm.offsetY = (float) playerAnimation.rightArm.yPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.rightArm.zPath.path != null) bipedRightArm.offsetZ = (float) playerAnimation.rightArm.zPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.rightArm.xRotPath.path != null) bipedRightArm.rotateAngleX = (float) Tools.posMod(playerAnimation.rightArm.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.rightArm.yRotPath.path != null) bipedRightArm.rotateAngleY = (float) Tools.posMod(playerAnimation.rightArm.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.rightArm.zRotPath.path != null) bipedRightArm.rotateAngleZ = (float) Tools.posMod(playerAnimation.rightArm.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
 
-                        if (playerAnimation.rightArm.xScalePath != null)
+                        if (playerAnimation.rightArm.xScalePath.path != null)
                         {
                             rightArmScale = new float[]{(float) playerAnimation.rightArm.xScalePath.getRelativePosition(millis).values[0], 1, 1};
                         }
-                        if (playerAnimation.rightArm.yScalePath != null)
+                        if (playerAnimation.rightArm.yScalePath.path != null)
                         {
                             if (rightArmScale == null) rightArmScale = new float[]{1, (float) playerAnimation.rightArm.yScalePath.getRelativePosition(millis).values[0], 1};
                             else rightArmScale[1] = (float) playerAnimation.rightArm.yScalePath.getRelativePosition(millis).values[0];
                         }
-                        if (playerAnimation.rightArm.zScalePath != null)
+                        if (playerAnimation.rightArm.zScalePath.path != null)
                         {
                             if (rightArmScale == null) rightArmScale = new float[]{1, 1, (float) playerAnimation.rightArm.zScalePath.getRelativePosition(millis).values[0]};
                             else rightArmScale[2] = (float) playerAnimation.rightArm.zScalePath.getRelativePosition(millis).values[0];
@@ -271,23 +271,23 @@ public class ModelSkinOutfitEdit extends ModelSkinOutfit
 
                     case "armourers:legs.leftLeg":
                         //FLib compat start
-                        if (playerAnimation.leftLeg.xPath != null) bipedLeftLeg.offsetX = (float) playerAnimation.leftLeg.xPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.leftLeg.yPath != null) bipedLeftLeg.offsetY = (float) playerAnimation.leftLeg.yPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.leftLeg.zPath != null) bipedLeftLeg.offsetZ = (float) playerAnimation.leftLeg.zPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.leftLeg.xRotPath != null) bipedLeftLeg.rotateAngleX = (float) Tools.posMod(playerAnimation.leftLeg.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.leftLeg.yRotPath != null) bipedLeftLeg.rotateAngleY = (float) Tools.posMod(playerAnimation.leftLeg.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.leftLeg.zRotPath != null) bipedLeftLeg.rotateAngleZ = (float) Tools.posMod(playerAnimation.leftLeg.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.leftLeg.xPath.path != null) bipedLeftLeg.offsetX = (float) playerAnimation.leftLeg.xPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.leftLeg.yPath.path != null) bipedLeftLeg.offsetY = (float) playerAnimation.leftLeg.yPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.leftLeg.zPath.path != null) bipedLeftLeg.offsetZ = (float) playerAnimation.leftLeg.zPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.leftLeg.xRotPath.path != null) bipedLeftLeg.rotateAngleX = (float) Tools.posMod(playerAnimation.leftLeg.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.leftLeg.yRotPath.path != null) bipedLeftLeg.rotateAngleY = (float) Tools.posMod(playerAnimation.leftLeg.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.leftLeg.zRotPath.path != null) bipedLeftLeg.rotateAngleZ = (float) Tools.posMod(playerAnimation.leftLeg.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
 
-                        if (playerAnimation.leftLeg.xScalePath != null)
+                        if (playerAnimation.leftLeg.xScalePath.path != null)
                         {
                             leftLegScale = new float[]{(float) playerAnimation.leftLeg.xScalePath.getRelativePosition(millis).values[0], 1, 1};
                         }
-                        if (playerAnimation.leftLeg.yScalePath != null)
+                        if (playerAnimation.leftLeg.yScalePath.path != null)
                         {
                             if (leftLegScale == null) leftLegScale = new float[]{1, (float) playerAnimation.leftLeg.yScalePath.getRelativePosition(millis).values[0], 1};
                             else leftLegScale[1] = (float) playerAnimation.leftLeg.yScalePath.getRelativePosition(millis).values[0];
                         }
-                        if (playerAnimation.leftLeg.zScalePath != null)
+                        if (playerAnimation.leftLeg.zScalePath.path != null)
                         {
                             if (leftLegScale == null) leftLegScale = new float[]{1, 1, (float) playerAnimation.leftLeg.zScalePath.getRelativePosition(millis).values[0]};
                             else leftLegScale[2] = (float) playerAnimation.leftLeg.zScalePath.getRelativePosition(millis).values[0];
@@ -302,23 +302,23 @@ public class ModelSkinOutfitEdit extends ModelSkinOutfit
 
                     case "armourers:legs.rightLeg":
                         //FLib compat start
-                        if (playerAnimation.rightLeg.xPath != null) bipedRightLeg.offsetX = (float) playerAnimation.rightLeg.xPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.rightLeg.yPath != null) bipedRightLeg.offsetY = (float) playerAnimation.rightLeg.yPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.rightLeg.zPath != null) bipedRightLeg.offsetZ = (float) playerAnimation.rightLeg.zPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.rightLeg.xRotPath != null) bipedRightLeg.rotateAngleX = (float) Tools.posMod(playerAnimation.rightLeg.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.rightLeg.yRotPath != null) bipedRightLeg.rotateAngleY = (float) Tools.posMod(playerAnimation.rightLeg.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.rightLeg.zRotPath != null) bipedRightLeg.rotateAngleZ = (float) Tools.posMod(playerAnimation.rightLeg.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.rightLeg.xPath.path != null) bipedRightLeg.offsetX = (float) playerAnimation.rightLeg.xPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.rightLeg.yPath.path != null) bipedRightLeg.offsetY = (float) playerAnimation.rightLeg.yPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.rightLeg.zPath.path != null) bipedRightLeg.offsetZ = (float) playerAnimation.rightLeg.zPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.rightLeg.xRotPath.path != null) bipedRightLeg.rotateAngleX = (float) Tools.posMod(playerAnimation.rightLeg.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.rightLeg.yRotPath.path != null) bipedRightLeg.rotateAngleY = (float) Tools.posMod(playerAnimation.rightLeg.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.rightLeg.zRotPath.path != null) bipedRightLeg.rotateAngleZ = (float) Tools.posMod(playerAnimation.rightLeg.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
 
-                        if (playerAnimation.rightLeg.xScalePath != null)
+                        if (playerAnimation.rightLeg.xScalePath.path != null)
                         {
                             rightLegScale = new float[]{(float) playerAnimation.rightLeg.xScalePath.getRelativePosition(millis).values[0], 1, 1};
                         }
-                        if (playerAnimation.rightLeg.yScalePath != null)
+                        if (playerAnimation.rightLeg.yScalePath.path != null)
                         {
                             if (rightLegScale == null) rightLegScale = new float[]{1, (float) playerAnimation.rightLeg.yScalePath.getRelativePosition(millis).values[0], 1};
                             else rightLegScale[1] = (float) playerAnimation.rightLeg.yScalePath.getRelativePosition(millis).values[0];
                         }
-                        if (playerAnimation.rightLeg.zScalePath != null)
+                        if (playerAnimation.rightLeg.zScalePath.path != null)
                         {
                             if (rightLegScale == null) rightLegScale = new float[]{1, 1, (float) playerAnimation.rightLeg.zScalePath.getRelativePosition(millis).values[0]};
                             else rightLegScale[2] = (float) playerAnimation.rightLeg.zScalePath.getRelativePosition(millis).values[0];
@@ -337,23 +337,23 @@ public class ModelSkinOutfitEdit extends ModelSkinOutfit
 
                     case "armourers:feet.leftFoot":
                         //FLib compat start
-                        if (playerAnimation.leftLeg.xPath != null) bipedLeftLeg.offsetX = (float) playerAnimation.leftLeg.xPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.leftLeg.yPath != null) bipedLeftLeg.offsetY = (float) playerAnimation.leftLeg.yPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.leftLeg.zPath != null) bipedLeftLeg.offsetZ = (float) playerAnimation.leftLeg.zPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.leftLeg.xRotPath != null) bipedLeftLeg.rotateAngleX = (float) Tools.posMod(playerAnimation.leftLeg.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.leftLeg.yRotPath != null) bipedLeftLeg.rotateAngleY = (float) Tools.posMod(playerAnimation.leftLeg.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.leftLeg.zRotPath != null) bipedLeftLeg.rotateAngleZ = (float) Tools.posMod(playerAnimation.leftLeg.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.leftLeg.xPath.path != null) bipedLeftLeg.offsetX = (float) playerAnimation.leftLeg.xPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.leftLeg.yPath.path != null) bipedLeftLeg.offsetY = (float) playerAnimation.leftLeg.yPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.leftLeg.zPath.path != null) bipedLeftLeg.offsetZ = (float) playerAnimation.leftLeg.zPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.leftLeg.xRotPath.path != null) bipedLeftLeg.rotateAngleX = (float) Tools.posMod(playerAnimation.leftLeg.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.leftLeg.yRotPath.path != null) bipedLeftLeg.rotateAngleY = (float) Tools.posMod(playerAnimation.leftLeg.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.leftLeg.zRotPath.path != null) bipedLeftLeg.rotateAngleZ = (float) Tools.posMod(playerAnimation.leftLeg.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
 
-                        if (playerAnimation.leftLeg.xScalePath != null)
+                        if (playerAnimation.leftLeg.xScalePath.path != null)
                         {
                             leftLegScale = new float[]{(float) playerAnimation.leftLeg.xScalePath.getRelativePosition(millis).values[0], 1, 1};
                         }
-                        if (playerAnimation.leftLeg.yScalePath != null)
+                        if (playerAnimation.leftLeg.yScalePath.path != null)
                         {
                             if (leftLegScale == null) leftLegScale = new float[]{1, (float) playerAnimation.leftLeg.yScalePath.getRelativePosition(millis).values[0], 1};
                             else leftLegScale[1] = (float) playerAnimation.leftLeg.yScalePath.getRelativePosition(millis).values[0];
                         }
-                        if (playerAnimation.leftLeg.zScalePath != null)
+                        if (playerAnimation.leftLeg.zScalePath.path != null)
                         {
                             if (leftLegScale == null) leftLegScale = new float[]{1, 1, (float) playerAnimation.leftLeg.zScalePath.getRelativePosition(millis).values[0]};
                             else leftLegScale[2] = (float) playerAnimation.leftLeg.zScalePath.getRelativePosition(millis).values[0];
@@ -368,23 +368,23 @@ public class ModelSkinOutfitEdit extends ModelSkinOutfit
 
                     case "armourers:feet.rightFoot":
                         //FLib compat start
-                        if (playerAnimation.rightLeg.xPath != null) bipedRightLeg.offsetX = (float) playerAnimation.rightLeg.xPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.rightLeg.yPath != null) bipedRightLeg.offsetY = (float) playerAnimation.rightLeg.yPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.rightLeg.zPath != null) bipedRightLeg.offsetZ = (float) playerAnimation.rightLeg.zPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.rightLeg.xRotPath != null) bipedRightLeg.rotateAngleX = (float) Tools.posMod(playerAnimation.rightLeg.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.rightLeg.yRotPath != null) bipedRightLeg.rotateAngleY = (float) Tools.posMod(playerAnimation.rightLeg.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.rightLeg.zRotPath != null) bipedRightLeg.rotateAngleZ = (float) Tools.posMod(playerAnimation.rightLeg.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.rightLeg.xPath.path != null) bipedRightLeg.offsetX = (float) playerAnimation.rightLeg.xPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.rightLeg.yPath.path != null) bipedRightLeg.offsetY = (float) playerAnimation.rightLeg.yPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.rightLeg.zPath.path != null) bipedRightLeg.offsetZ = (float) playerAnimation.rightLeg.zPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.rightLeg.xRotPath.path != null) bipedRightLeg.rotateAngleX = (float) Tools.posMod(playerAnimation.rightLeg.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.rightLeg.yRotPath.path != null) bipedRightLeg.rotateAngleY = (float) Tools.posMod(playerAnimation.rightLeg.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.rightLeg.zRotPath.path != null) bipedRightLeg.rotateAngleZ = (float) Tools.posMod(playerAnimation.rightLeg.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
 
-                        if (playerAnimation.rightLeg.xScalePath != null)
+                        if (playerAnimation.rightLeg.xScalePath.path != null)
                         {
                             rightLegScale = new float[]{(float) playerAnimation.rightLeg.xScalePath.getRelativePosition(millis).values[0], 1, 1};
                         }
-                        if (playerAnimation.rightLeg.yScalePath != null)
+                        if (playerAnimation.rightLeg.yScalePath.path != null)
                         {
                             if (rightLegScale == null) rightLegScale = new float[]{1, (float) playerAnimation.rightLeg.yScalePath.getRelativePosition(millis).values[0], 1};
                             else rightLegScale[1] = (float) playerAnimation.rightLeg.yScalePath.getRelativePosition(millis).values[0];
                         }
-                        if (playerAnimation.rightLeg.zScalePath != null)
+                        if (playerAnimation.rightLeg.zScalePath.path != null)
                         {
                             if (rightLegScale == null) rightLegScale = new float[]{1, 1, (float) playerAnimation.rightLeg.zScalePath.getRelativePosition(millis).values[0]};
                             else rightLegScale[2] = (float) playerAnimation.rightLeg.zScalePath.getRelativePosition(millis).values[0];
@@ -399,23 +399,23 @@ public class ModelSkinOutfitEdit extends ModelSkinOutfit
 
                     case "armourers:wings.leftWing":
                         //FLib compat start
-                        if (playerAnimation.chest.xPath != null) bipedBody.offsetX = (float) playerAnimation.chest.xPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.chest.yPath != null) bipedBody.offsetY = (float) playerAnimation.chest.yPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.chest.zPath != null) bipedBody.offsetZ = (float) playerAnimation.chest.zPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.chest.xRotPath != null) bipedBody.rotateAngleX = (float) Tools.posMod(playerAnimation.chest.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.chest.yRotPath != null) bipedBody.rotateAngleY = (float) Tools.posMod(playerAnimation.chest.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.chest.zRotPath != null) bipedBody.rotateAngleZ = (float) Tools.posMod(playerAnimation.chest.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.chest.xPath.path != null) bipedBody.offsetX = (float) playerAnimation.chest.xPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.chest.yPath.path != null) bipedBody.offsetY = (float) playerAnimation.chest.yPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.chest.zPath.path != null) bipedBody.offsetZ = (float) playerAnimation.chest.zPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.chest.xRotPath.path != null) bipedBody.rotateAngleX = (float) Tools.posMod(playerAnimation.chest.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.chest.yRotPath.path != null) bipedBody.rotateAngleY = (float) Tools.posMod(playerAnimation.chest.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.chest.zRotPath.path != null) bipedBody.rotateAngleZ = (float) Tools.posMod(playerAnimation.chest.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
 
-                        if (playerAnimation.chest.xScalePath != null)
+                        if (playerAnimation.chest.xScalePath.path != null)
                         {
                             chestScale = new float[]{(float) playerAnimation.chest.xScalePath.getRelativePosition(millis).values[0], 1, 1};
                         }
-                        if (playerAnimation.chest.yScalePath != null)
+                        if (playerAnimation.chest.yScalePath.path != null)
                         {
                             if (chestScale == null) chestScale = new float[]{1, (float) playerAnimation.chest.yScalePath.getRelativePosition(millis).values[0], 1};
                             else chestScale[1] = (float) playerAnimation.chest.yScalePath.getRelativePosition(millis).values[0];
                         }
-                        if (playerAnimation.chest.zScalePath != null)
+                        if (playerAnimation.chest.zScalePath.path != null)
                         {
                             if (chestScale == null) chestScale = new float[]{1, 1, (float) playerAnimation.chest.zScalePath.getRelativePosition(millis).values[0]};
                             else chestScale[2] = (float) playerAnimation.chest.zScalePath.getRelativePosition(millis).values[0];
@@ -431,23 +431,23 @@ public class ModelSkinOutfitEdit extends ModelSkinOutfit
 
                     case "armourers:wings.rightWing":
                         //FLib compat start
-                        if (playerAnimation.chest.xPath != null) bipedBody.offsetX = (float) playerAnimation.chest.xPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.chest.yPath != null) bipedBody.offsetY = (float) playerAnimation.chest.yPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.chest.zPath != null) bipedBody.offsetZ = (float) playerAnimation.chest.zPath.getRelativePosition(millis).values[0];
-                        if (playerAnimation.chest.xRotPath != null) bipedBody.rotateAngleX = (float) Tools.posMod(playerAnimation.chest.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.chest.yRotPath != null) bipedBody.rotateAngleY = (float) Tools.posMod(playerAnimation.chest.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-                        if (playerAnimation.chest.zRotPath != null) bipedBody.rotateAngleZ = (float) Tools.posMod(playerAnimation.chest.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.chest.xPath.path != null) bipedBody.offsetX = (float) playerAnimation.chest.xPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.chest.yPath.path != null) bipedBody.offsetY = (float) playerAnimation.chest.yPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.chest.zPath.path != null) bipedBody.offsetZ = (float) playerAnimation.chest.zPath.getRelativePosition(millis).values[0];
+                        if (playerAnimation.chest.xRotPath.path != null) bipedBody.rotateAngleX = (float) Tools.posMod(playerAnimation.chest.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.chest.yRotPath.path != null) bipedBody.rotateAngleY = (float) Tools.posMod(playerAnimation.chest.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+                        if (playerAnimation.chest.zRotPath.path != null) bipedBody.rotateAngleZ = (float) Tools.posMod(playerAnimation.chest.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
 
-                        if (playerAnimation.chest.xScalePath != null)
+                        if (playerAnimation.chest.xScalePath.path != null)
                         {
                             chestScale = new float[]{(float) playerAnimation.chest.xScalePath.getRelativePosition(millis).values[0], 1, 1};
                         }
-                        if (playerAnimation.chest.yScalePath != null)
+                        if (playerAnimation.chest.yScalePath.path != null)
                         {
                             if (chestScale == null) chestScale = new float[]{1, (float) playerAnimation.chest.yScalePath.getRelativePosition(millis).values[0], 1};
                             else chestScale[1] = (float) playerAnimation.chest.yScalePath.getRelativePosition(millis).values[0];
                         }
-                        if (playerAnimation.chest.zScalePath != null)
+                        if (playerAnimation.chest.zScalePath.path != null)
                         {
                             if (chestScale == null) chestScale = new float[]{1, 1, (float) playerAnimation.chest.zScalePath.getRelativePosition(millis).values[0]};
                             else chestScale[2] = (float) playerAnimation.chest.zScalePath.getRelativePosition(millis).values[0];

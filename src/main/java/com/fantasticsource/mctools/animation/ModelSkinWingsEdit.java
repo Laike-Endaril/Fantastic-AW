@@ -65,23 +65,23 @@ public class ModelSkinWingsEdit extends ModelSkinWings
             CBipedAnimation playerAnimation = CBipedAnimation.getCurrent(entity);
             long millis = System.currentTimeMillis();
 
-            if (playerAnimation.chest.xPath != null) bipedBody.offsetX = (float) playerAnimation.chest.xPath.getRelativePosition(millis).values[0];
-            if (playerAnimation.chest.yPath != null) bipedBody.offsetY = (float) playerAnimation.chest.yPath.getRelativePosition(millis).values[0];
-            if (playerAnimation.chest.zPath != null) bipedBody.offsetZ = (float) playerAnimation.chest.zPath.getRelativePosition(millis).values[0];
-            if (playerAnimation.chest.xRotPath != null) bipedBody.rotateAngleX = (float) Tools.posMod(playerAnimation.chest.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-            if (playerAnimation.chest.yRotPath != null) bipedBody.rotateAngleY = (float) Tools.posMod(playerAnimation.chest.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
-            if (playerAnimation.chest.zRotPath != null) bipedBody.rotateAngleZ = (float) Tools.posMod(playerAnimation.chest.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+            if (playerAnimation.chest.xPath.path != null) bipedBody.offsetX = (float) playerAnimation.chest.xPath.getRelativePosition(millis).values[0];
+            if (playerAnimation.chest.yPath.path != null) bipedBody.offsetY = (float) playerAnimation.chest.yPath.getRelativePosition(millis).values[0];
+            if (playerAnimation.chest.zPath.path != null) bipedBody.offsetZ = (float) playerAnimation.chest.zPath.getRelativePosition(millis).values[0];
+            if (playerAnimation.chest.xRotPath.path != null) bipedBody.rotateAngleX = (float) Tools.posMod(playerAnimation.chest.xRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+            if (playerAnimation.chest.yRotPath.path != null) bipedBody.rotateAngleY = (float) Tools.posMod(playerAnimation.chest.yRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
+            if (playerAnimation.chest.zRotPath.path != null) bipedBody.rotateAngleZ = (float) Tools.posMod(playerAnimation.chest.zRotPath.getRelativePosition(millis).values[0], Math.PI * 2);
 
-            if (playerAnimation.chest.xScalePath != null)
+            if (playerAnimation.chest.xScalePath.path != null)
             {
                 chestScale = new float[]{(float) playerAnimation.chest.xScalePath.getRelativePosition(millis).values[0], 1, 1};
             }
-            if (playerAnimation.chest.yScalePath != null)
+            if (playerAnimation.chest.yScalePath.path != null)
             {
                 if (chestScale == null) chestScale = new float[]{1, (float) playerAnimation.chest.yScalePath.getRelativePosition(millis).values[0], 1};
                 else chestScale[1] = (float) playerAnimation.chest.yScalePath.getRelativePosition(millis).values[0];
             }
-            if (playerAnimation.chest.zScalePath != null)
+            if (playerAnimation.chest.zScalePath.path != null)
             {
                 if (chestScale == null) chestScale = new float[]{1, 1, (float) playerAnimation.chest.zScalePath.getRelativePosition(millis).values[0]};
                 else chestScale[2] = (float) playerAnimation.chest.zScalePath.getRelativePosition(millis).values[0];
