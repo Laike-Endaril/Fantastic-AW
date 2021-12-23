@@ -21,7 +21,7 @@ public class FantasticAW
 {
     public static final String MODID = "fantasticaw";
     public static final String NAME = "Fantastic AW";
-    public static final String VERSION = "1.12.2.000e";
+    public static final String VERSION = "1.12.2.000f";
 
     @Mod.EventHandler
     public static void preInit(FMLPreInitializationEvent event)

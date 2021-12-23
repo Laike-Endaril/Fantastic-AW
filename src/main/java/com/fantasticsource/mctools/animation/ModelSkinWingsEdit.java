@@ -120,10 +120,6 @@ public class ModelSkinWingsEdit extends ModelSkinWings
             point = partRenderData.getSkinPart().getMarker(0);
             axis = partRenderData.getSkinPart().getMarkerSide(0);
         }
-        GL11.glRotatef((float) Math.toDegrees(bipedBody.rotateAngleZ), 0, 0, 1);
-        GL11.glRotatef((float) Math.toDegrees(bipedBody.rotateAngleY), 0, 1, 0);
-        GL11.glRotatef((float) Math.toDegrees(bipedBody.rotateAngleX), 1, 0, 0);
-
 
         GL11.glTranslated(SCALE * 0.5F, SCALE * 0.5F, SCALE * 0.5F);
         GL11.glTranslated(SCALE * point.getX(), SCALE * point.getY(), SCALE * point.getZ());
@@ -168,9 +164,6 @@ public class ModelSkinWingsEdit extends ModelSkinWings
             point = partRenderData.getSkinPart().getMarker(0);
             axis = partRenderData.getSkinPart().getMarkerSide(0);
         }
-        GL11.glRotatef((float) Math.toDegrees(bipedBody.rotateAngleZ), 0, 0, 1);
-        GL11.glRotatef((float) Math.toDegrees(bipedBody.rotateAngleY), 0, 1, 0);
-        GL11.glRotatef((float) Math.toDegrees(bipedBody.rotateAngleX), 1, 0, 0);
 
         GL11.glTranslated(SCALE * 0.5F, SCALE * 0.5F, SCALE * 0.5F);
         GL11.glTranslated(SCALE * point.getX(), SCALE * point.getY(), SCALE * point.getZ());

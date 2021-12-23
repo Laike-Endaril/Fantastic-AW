@@ -11,8 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-
-version = "1.12.2.000e"
+version = "1.12.2.000f"
 group = "com.fantasticsource.fantasticaw" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "FantasticAW"
 
@@ -35,11 +34,11 @@ processResources {
     // replace stuff in mcmod.info, nothing else
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod.info'
-                
+
         // replace version and mcversion
-        expand 'version':project.version, 'mcversion':project.minecraft.version
+        expand 'version': project.version, 'mcversion': project.minecraft.version
     }
-        
+
     // copy everything else except the mcmod.info
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
