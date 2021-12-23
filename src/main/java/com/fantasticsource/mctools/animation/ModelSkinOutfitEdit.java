@@ -170,7 +170,11 @@ public class ModelSkinOutfitEdit extends ModelSkinOutfit
                 if (isSneak)
                 {
                     GlStateManager.translate(0.0F, 0.2F, 0.0F);
-                    if (skinPart.getPartType().getRegistryName().equals("armourers:legs.leftLeg") || skinPart.getPartType().getRegistryName().equals("armourers:legs.rightLeg")) GL11.glTranslated(0, -3 * SCALE, 4 * SCALE);
+                    if (skinPart.getPartType().getRegistryName().equals("armourers:legs.leftLeg") || skinPart.getPartType().getRegistryName().equals("armourers:legs.rightLeg")
+                            || skinPart.getPartType().getRegistryName().equals("armourers:feet.leftFoot") || skinPart.getPartType().getRegistryName().equals("armourers:feet.rightFoot"))
+                    {
+                        GL11.glTranslated(0, -3 * SCALE, 4 * SCALE);
+                    }
                 }
 
                 switch (skinPart.getPartType().getRegistryName())
