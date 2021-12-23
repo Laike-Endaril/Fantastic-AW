@@ -110,10 +110,6 @@ public class ModelSkinChestEdit extends ModelSkinChest
                 }
                 if (chestScale != null) GlStateManager.scale(chestScale[0], chestScale[1], chestScale[2]);
                 GL11.glTranslatef(bipedBody.offsetX, bipedBody.offsetY, bipedBody.offsetZ);
-
-                GL11.glRotated(Math.toDegrees(bipedBody.rotateAngleZ), 0, 0, 1);
-                GL11.glRotated(Math.toDegrees(bipedBody.rotateAngleY), 0, 1, 0);
-                GL11.glRotated(Math.toDegrees(bipedBody.rotateAngleX), 1, 0, 0);
                 //FLib compat end
 
                 renderChest(new SkinPartRenderData(part, renderData));
@@ -188,11 +184,9 @@ public class ModelSkinChestEdit extends ModelSkinChest
     private void renderChest(SkinPartRenderData skinPartRenderData)
     {
         GL11.glPushMatrix();
+        GL11.glRotatef((float) Math.toDegrees(bipedBody.rotateAngleZ), 0, 0, 1);
         GL11.glRotatef((float) Math.toDegrees(bipedBody.rotateAngleY), 0, 1, 0);
-        if (isSneak)
-        {
-            GL11.glRotated(Math.toDegrees(bipedBody.rotateAngleX), 1F, 0, 0);
-        }
+        GL11.glRotatef((float) Math.toDegrees(bipedBody.rotateAngleX), 1, 0, 0);
         GL11.glColor3f(1F, 1F, 1F);
         renderPart(skinPartRenderData);
         GL11.glPopMatrix();
