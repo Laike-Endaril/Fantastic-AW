@@ -167,8 +167,11 @@ public class ModelSkinOutfitEdit extends ModelSkinOutfit
                     GL11.glScalef(0.5f, 0.5f, 0.5f);
                     GL11.glTranslatef(0.0F, 24.0F * SCALE, 0.0F);
                 }
-
-                if (isSneak) GlStateManager.translate(0.0F, 0.2F, 0.0F);
+                if (isSneak)
+                {
+                    GlStateManager.translate(0.0F, 0.2F, 0.0F);
+                    if (skinPart.getPartType().getRegistryName().equals("armourers:legs.leftLeg") || skinPart.getPartType().getRegistryName().equals("armourers:legs.rightLeg")) GL11.glTranslated(0, -3 * SCALE, 4 * SCALE);
+                }
 
                 switch (skinPart.getPartType().getRegistryName())
                 {
