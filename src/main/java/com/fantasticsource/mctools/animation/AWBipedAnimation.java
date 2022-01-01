@@ -34,6 +34,8 @@ public class AWBipedAnimation
 
     public static void init(FMLPostInitializationEvent event)
     {
+        CBipedAnimation.init(event);
+
         ClientTickTimer.schedule(2, () ->
         {
             MinecraftForge.EVENT_BUS.register(AWBipedAnimation.class);
